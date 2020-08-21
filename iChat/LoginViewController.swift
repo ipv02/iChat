@@ -1,35 +1,42 @@
 //
-//  SignUpViewController.swift
+//  LoginViewController.swift
 //  iChat
 //
-//  Created by Elena Igumenova on 20.08.2020.
+//  Created by Elena Igumenova on 21.08.2020.
 //  Copyright © 2020 I_P-V. All rights reserved.
 //
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+class LoginViewController: UIViewController {
     
-    let welcomeLabel = UILabel(text: "Good to see you!", font: .avenir26())
+    let welcomeLabel = UILabel(text: "Welcome back!", font: .avenir26())
+    let loginWithLabel = UILabel(text: "Login with")
+    let ordLabel = UILabel(text: "or")
     let emailLabel = UILabel(text: "Email")
     let passwordLabel = UILabel(text: "Password")
-    let confirmPasswordLabel = UILabel(text: "Confirm password")
-    let alredyOnboardLabel = UILabel(text: "Alredy onboard?")
+    let needAnAccountLabel = UILabel(text: "Need an account?")
+    
+    let googleButton = UIButton(title: "Google",
+                                titleColor: .black,
+                                backgroundColor: .white,
+                                font: .avenir20(),
+                                isShadow: true,
+                                cornerRadius: 5)
     
     let emailTextField = OneLineTextField(font: .avenir20())
     let passwordTextField = OneLineTextField(font: .avenir20())
-    let confirmPasswordTextField = OneLineTextField(font: .avenir20())
     
-    let signUpButton = UIButton(title: "Sign Up",
+    let loginButton = UIButton(title: "Login",
                                 titleColor: .white,
                                 backgroundColor: .buttonDark(),
                                 font: .avenir20(),
                                 isShadow: true,
                                 cornerRadius: 5)
     
-    let loginButton: UIButton = {
+    let signInButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Login", for: .normal)
+        button.setTitle("Sign in", for: .normal)
         button.setTitleColor(.buttonRed(), for: .normal)
         button.titleLabel?.font = .avenir20()
         return button
@@ -37,56 +44,51 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.backgroundColor = .white
         
-        setupConstarints()
+        setupConstraints()
     }
+    
+    
 }
 
-//MARK: Constraints
-extension SignUpViewController {
+// MARK: Constrains
+extension LoginViewController {
     
-    private func setupConstarints() {
-        
+    private func setupConstraints() {
+        let loginWithView = ButtonFormView(label: loginWithLabel, button: googleButton)
         let emailStackView = UIStackView(arrangedSubviews: [
             emailLabel,
             emailTextField
             ],
                                          axis: .vertical,
                                          spacing: 0)
-        
         let passwordStackView = UIStackView(arrangedSubviews: [
             passwordLabel,
             passwordTextField
             ],
-                                            axis: .vertical,
-                                            spacing: 0)
+                                         axis: .vertical,
+                                         spacing: 0)
         
-        let confirmPasswordStackView = UIStackView(arrangedSubviews: [
-            confirmPasswordLabel,
-            confirmPasswordTextField
-            ],
-                                                   axis: .vertical,
-                                                   spacing: 0)
-        
-        signUpButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
-        
+        loginButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
         let stackView = UIStackView(arrangedSubviews: [
+            loginWithView,
+            ordLabel,
             emailStackView,
             passwordStackView,
-            confirmPasswordStackView,
-            signUpButton
+            loginButton
             ],
                                     axis: .vertical,
                                     spacing: 40)
         
-        loginButton.contentHorizontalAlignment = .leading
+        signInButton.contentHorizontalAlignment = .leading
         let bottomStackView = UIStackView(arrangedSubviews: [
-            alredyOnboardLabel,
-            loginButton],
+            needAnAccountLabel,
+            signInButton
+        ],
                                           axis: .horizontal,
                                           spacing: 10)
+        
         bottomStackView.alignment = .firstBaseline
         
         welcomeLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -96,14 +98,14 @@ extension SignUpViewController {
         view.addSubview(welcomeLabel)
         view.addSubview(stackView)
         view.addSubview(bottomStackView)
-   
+        
         NSLayoutConstraint.activate([
             welcomeLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 160),
             welcomeLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: 160),
+            stackView.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: 30),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
         ])
@@ -113,16 +115,14 @@ extension SignUpViewController {
             bottomStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             bottomStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
         ])
-
-        
-        
     }
 }
 
-// MARK: SwiftUI
+
+// MARK: SwiftYU
 import SwiftUI
 
-struct SignUpVCProvider: PreviewProvider {
+struct LoginVCProvider: PreviewProvider {
     static var previews: some View {
         ContainerView()
             .edgesIgnoringSafeArea(.all)
@@ -130,15 +130,14 @@ struct SignUpVCProvider: PreviewProvider {
     
     struct ContainerView: UIViewControllerRepresentable {
         
-        let signUpVC = SignUpViewController()
+        let loginVC = LoginViewController()
         
-        func makeUIViewController(context: UIViewControllerRepresentableContext<SignUpVCProvider.ContainerView>) -> SignUpViewController {
-            return signUpVC
+        func makeUIViewController(context: UIViewControllerRepresentableContext<LoginVCProvider.ContainerView>) -> LoginViewController {
+            return loginVC
         }
         
-        func updateUIViewController(_ uiViewController: SignUpVCProvider.ContainerView.UIViewControllerType, context: UIViewControllerRepresentableContext<SignUpVCProvider.ContainerView>) {
+        func updateUIViewController(_ uiViewController: LoginVCProvider.ContainerView.UIViewControllerType, context: UIViewControllerRepresentableContext<LoginVCProvider.ContainerView>) {
             
         }
     }
 }
-
