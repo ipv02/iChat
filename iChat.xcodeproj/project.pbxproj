@@ -9,21 +9,39 @@
 /* Begin PBXBuildFile section */
 		8445F9B124E988DF0092F4EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445F9B024E988DF0092F4EB /* AppDelegate.swift */; };
 		8445F9B324E988DF0092F4EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445F9B224E988DF0092F4EB /* SceneDelegate.swift */; };
-		8445F9B524E988DF0092F4EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445F9B424E988DF0092F4EB /* ViewController.swift */; };
-		8445F9B824E988DF0092F4EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8445F9B624E988DF0092F4EB /* Main.storyboard */; };
+		8445F9B524E988DF0092F4EB /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445F9B424E988DF0092F4EB /* AuthViewController.swift */; };
 		8445F9BA24E988E40092F4EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8445F9B924E988E40092F4EB /* Assets.xcassets */; };
 		8445F9BD24E988E40092F4EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8445F9BB24E988E40092F4EB /* LaunchScreen.storyboard */; };
+		8445F9C524EB21DC0092F4EB /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445F9C424EB21DC0092F4EB /* UIButton+Extension.swift */; };
+		8445F9C724EB24D50092F4EB /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445F9C624EB24D50092F4EB /* UIFont+Extension.swift */; };
+		8445F9C924EB26300092F4EB /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445F9C824EB26300092F4EB /* UIColor+Extension.swift */; };
+		8445F9CB24EB290E0092F4EB /* Label+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445F9CA24EB290E0092F4EB /* Label+Extension.swift */; };
+		8445F9CD24EB2A330092F4EB /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445F9CC24EB2A330092F4EB /* UIImageView+Extension.swift */; };
+		8445F9D524EDB19E0092F4EB /* ButtonSwiftFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445F9D424EDB19E0092F4EB /* ButtonSwiftFormView.swift */; };
+		8445F9D724EDD0FD0092F4EB /* StackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445F9D624EDD0FD0092F4EB /* StackView+Extension.swift */; };
+		8445F9D924EF05DA0092F4EB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445F9D824EF05DA0092F4EB /* SignUpViewController.swift */; };
+		8445F9DB24EF0A1D0092F4EB /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445F9DA24EF0A1D0092F4EB /* OneLineTextField.swift */; };
+		8445F9DF24F046370092F4EB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445F9DE24F046370092F4EB /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8445F9AD24E988DF0092F4EB /* iChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8445F9B024E988DF0092F4EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8445F9B224E988DF0092F4EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8445F9B424E988DF0092F4EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8445F9B724E988DF0092F4EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8445F9B424E988DF0092F4EB /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		8445F9B924E988E40092F4EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8445F9BC24E988E40092F4EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8445F9BE24E988E40092F4EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8445F9C424EB21DC0092F4EB /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		8445F9C624EB24D50092F4EB /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		8445F9C824EB26300092F4EB /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		8445F9CA24EB290E0092F4EB /* Label+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Label+Extension.swift"; sourceTree = "<group>"; };
+		8445F9CC24EB2A330092F4EB /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		8445F9D424EDB19E0092F4EB /* ButtonSwiftFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSwiftFormView.swift; sourceTree = "<group>"; };
+		8445F9D624EDD0FD0092F4EB /* StackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StackView+Extension.swift"; sourceTree = "<group>"; };
+		8445F9D824EF05DA0092F4EB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		8445F9DA24EF0A1D0092F4EB /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
+		8445F9DE24F046370092F4EB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +76,17 @@
 			children = (
 				8445F9B024E988DF0092F4EB /* AppDelegate.swift */,
 				8445F9B224E988DF0092F4EB /* SceneDelegate.swift */,
-				8445F9B424E988DF0092F4EB /* ViewController.swift */,
-				8445F9B624E988DF0092F4EB /* Main.storyboard */,
+				8445F9B424E988DF0092F4EB /* AuthViewController.swift */,
+				8445F9D824EF05DA0092F4EB /* SignUpViewController.swift */,
+				8445F9DE24F046370092F4EB /* LoginViewController.swift */,
+				8445F9DA24EF0A1D0092F4EB /* OneLineTextField.swift */,
+				8445F9D424EDB19E0092F4EB /* ButtonSwiftFormView.swift */,
+				8445F9CC24EB2A330092F4EB /* UIImageView+Extension.swift */,
+				8445F9D624EDD0FD0092F4EB /* StackView+Extension.swift */,
+				8445F9CA24EB290E0092F4EB /* Label+Extension.swift */,
+				8445F9C824EB26300092F4EB /* UIColor+Extension.swift */,
+				8445F9C424EB21DC0092F4EB /* UIButton+Extension.swift */,
+				8445F9C624EB24D50092F4EB /* UIFont+Extension.swift */,
 				8445F9B924E988E40092F4EB /* Assets.xcassets */,
 				8445F9BB24E988E40092F4EB /* LaunchScreen.storyboard */,
 				8445F9BE24E988E40092F4EB /* Info.plist */,
@@ -127,7 +154,6 @@
 			files = (
 				8445F9BD24E988E40092F4EB /* LaunchScreen.storyboard in Resources */,
 				8445F9BA24E988E40092F4EB /* Assets.xcassets in Resources */,
-				8445F9B824E988DF0092F4EB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +164,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8445F9B524E988DF0092F4EB /* ViewController.swift in Sources */,
+				8445F9DB24EF0A1D0092F4EB /* OneLineTextField.swift in Sources */,
+				8445F9D924EF05DA0092F4EB /* SignUpViewController.swift in Sources */,
+				8445F9CB24EB290E0092F4EB /* Label+Extension.swift in Sources */,
+				8445F9B524E988DF0092F4EB /* AuthViewController.swift in Sources */,
+				8445F9CD24EB2A330092F4EB /* UIImageView+Extension.swift in Sources */,
+				8445F9C524EB21DC0092F4EB /* UIButton+Extension.swift in Sources */,
 				8445F9B124E988DF0092F4EB /* AppDelegate.swift in Sources */,
+				8445F9C924EB26300092F4EB /* UIColor+Extension.swift in Sources */,
+				8445F9C724EB24D50092F4EB /* UIFont+Extension.swift in Sources */,
 				8445F9B324E988DF0092F4EB /* SceneDelegate.swift in Sources */,
+				8445F9D524EDB19E0092F4EB /* ButtonSwiftFormView.swift in Sources */,
+				8445F9DF24F046370092F4EB /* LoginViewController.swift in Sources */,
+				8445F9D724EDD0FD0092F4EB /* StackView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8445F9B624E988DF0092F4EB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8445F9B724E988DF0092F4EB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8445F9BB24E988E40092F4EB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
