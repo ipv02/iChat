@@ -44,8 +44,10 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         
+        googleButton.customizeGoogleButton()
+        
+        view.backgroundColor = .white
         setupConstraints()
     }
     
@@ -119,7 +121,7 @@ extension LoginViewController {
 }
 
 
-// MARK: SwiftYU
+// MARK: SwiftUI
 import SwiftUI
 
 struct LoginVCProvider: PreviewProvider {
