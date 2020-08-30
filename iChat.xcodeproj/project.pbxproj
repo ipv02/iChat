@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84108C2424FC056C00CB2376 /* ActiveChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84108C2324FC056C00CB2376 /* ActiveChatCell.swift */; };
 		8445F9B124E988DF0092F4EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445F9B024E988DF0092F4EB /* AppDelegate.swift */; };
 		8445F9B324E988DF0092F4EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445F9B224E988DF0092F4EB /* SceneDelegate.swift */; };
 		8445F9B524E988DF0092F4EB /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445F9B424E988DF0092F4EB /* AuthViewController.swift */; };
@@ -28,9 +29,13 @@
 		845C15AD24FAD7EF00B4FA84 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C15AC24FAD7EF00B4FA84 /* ListViewController.swift */; };
 		845C15B124FAE67E00B4FA84 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C15B024FAE67E00B4FA84 /* MainTabBarController.swift */; };
 		845C15B324FAE6F600B4FA84 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C15B224FAE6F600B4FA84 /* PeopleViewController.swift */; };
+		845C15B624FBCA5900B4FA84 /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 845C15B424FBCA5800B4FA84 /* activeChats.json */; };
+		845C15B724FBCA5900B4FA84 /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 845C15B524FBCA5800B4FA84 /* waitingChats.json */; };
+		845C15BB24FBCB8600B4FA84 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C15BA24FBCB8600B4FA84 /* Bundle-Decodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84108C2324FC056C00CB2376 /* ActiveChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveChatCell.swift; sourceTree = "<group>"; };
 		8445F9AD24E988DF0092F4EB /* iChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8445F9B024E988DF0092F4EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8445F9B224E988DF0092F4EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +59,9 @@
 		845C15AC24FAD7EF00B4FA84 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		845C15B024FAE67E00B4FA84 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		845C15B224FAE6F600B4FA84 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		845C15B424FBCA5800B4FA84 /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
+		845C15B524FBCA5800B4FA84 /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingChats.json; sourceTree = "<group>"; };
+		845C15BA24FBCB8600B4FA84 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +75,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84108C2224FC02A400CB2376 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				84108C2324FC056C00CB2376 /* ActiveChatCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		8445F9A424E988DF0092F4EB = {
 			isa = PBXGroup;
 			children = (
@@ -90,16 +106,7 @@
 				8445F9B224E988DF0092F4EB /* SceneDelegate.swift */,
 				845C15AF24FAE63100B4FA84 /* Controllers */,
 				845C15AE24FAE18400B4FA84 /* Signin&Auth */,
-				8445F9E224F065A70092F4EB /* AddPhotoView.swift */,
-				8445F9DA24EF0A1D0092F4EB /* OneLineTextField.swift */,
-				8445F9D424EDB19E0092F4EB /* ButtonSwiftFormView.swift */,
-				8445F9CC24EB2A330092F4EB /* UIImageView+Extension.swift */,
-				8445F9D624EDD0FD0092F4EB /* StackView+Extension.swift */,
-				8445F9CA24EB290E0092F4EB /* Label+Extension.swift */,
-				8445F9C824EB26300092F4EB /* UIColor+Extension.swift */,
-				8445F9C424EB21DC0092F4EB /* UIButton+Extension.swift */,
-				8445F9C624EB24D50092F4EB /* UIFont+Extension.swift */,
-				8445F9E424F135EA0092F4EB /* SegmentedControl+Extension.swift */,
+				845C15B824FBCA7000B4FA84 /* Extensions */,
 				8445F9B924E988E40092F4EB /* Assets.xcassets */,
 				8445F9BB24E988E40092F4EB /* LaunchScreen.storyboard */,
 				8445F9BE24E988E40092F4EB /* Info.plist */,
@@ -121,11 +128,40 @@
 		845C15AF24FAE63100B4FA84 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				84108C2224FC02A400CB2376 /* Cell */,
 				845C15B024FAE67E00B4FA84 /* MainTabBarController.swift */,
 				845C15AC24FAD7EF00B4FA84 /* ListViewController.swift */,
 				845C15B224FAE6F600B4FA84 /* PeopleViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		845C15B824FBCA7000B4FA84 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8445F9E224F065A70092F4EB /* AddPhotoView.swift */,
+				8445F9DA24EF0A1D0092F4EB /* OneLineTextField.swift */,
+				8445F9D424EDB19E0092F4EB /* ButtonSwiftFormView.swift */,
+				845C15BA24FBCB8600B4FA84 /* Bundle-Decodable.swift */,
+				845C15B924FBCAE200B4FA84 /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		845C15B924FBCAE200B4FA84 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				8445F9CC24EB2A330092F4EB /* UIImageView+Extension.swift */,
+				8445F9D624EDD0FD0092F4EB /* StackView+Extension.swift */,
+				8445F9CA24EB290E0092F4EB /* Label+Extension.swift */,
+				8445F9C824EB26300092F4EB /* UIColor+Extension.swift */,
+				8445F9C424EB21DC0092F4EB /* UIButton+Extension.swift */,
+				8445F9C624EB24D50092F4EB /* UIFont+Extension.swift */,
+				8445F9E424F135EA0092F4EB /* SegmentedControl+Extension.swift */,
+				845C15B424FBCA5800B4FA84 /* activeChats.json */,
+				845C15B524FBCA5800B4FA84 /* waitingChats.json */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,7 +223,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8445F9BD24E988E40092F4EB /* LaunchScreen.storyboard in Resources */,
+				845C15B624FBCA5900B4FA84 /* activeChats.json in Resources */,
 				8445F9BA24E988E40092F4EB /* Assets.xcassets in Resources */,
+				845C15B724FBCA5900B4FA84 /* waitingChats.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,9 +240,11 @@
 				8445F9E524F135EA0092F4EB /* SegmentedControl+Extension.swift in Sources */,
 				845C15B124FAE67E00B4FA84 /* MainTabBarController.swift in Sources */,
 				8445F9DB24EF0A1D0092F4EB /* OneLineTextField.swift in Sources */,
+				84108C2424FC056C00CB2376 /* ActiveChatCell.swift in Sources */,
 				8445F9D924EF05DA0092F4EB /* SignUpViewController.swift in Sources */,
 				845C15B324FAE6F600B4FA84 /* PeopleViewController.swift in Sources */,
 				8445F9CB24EB290E0092F4EB /* Label+Extension.swift in Sources */,
+				845C15BB24FBCB8600B4FA84 /* Bundle-Decodable.swift in Sources */,
 				8445F9B524E988DF0092F4EB /* AuthViewController.swift in Sources */,
 				8445F9E124F05F5A0092F4EB /* SetupProfileViewController.swift in Sources */,
 				8445F9CD24EB2A330092F4EB /* UIImageView+Extension.swift in Sources */,
