@@ -10,7 +10,7 @@ import UIKit
 
 class SetupProfileViewController: UIViewController {
     
-    let welcomeLabel = UILabel(text: "Set up profile!", font: .avenir26())
+    let welcomeLabel = UILabel(text: "Setup profile!", font: .avenir26())
     let fullNameLabel = UILabel(text: "Full name")
     let aboutMeLabel = UILabel(text: "About me")
     let sexLabel = UILabel(text: "Sex")
