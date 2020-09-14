@@ -35,6 +35,8 @@ class SignUpViewController: UIViewController {
         return button
     }()
     
+    weak var delegate: AuthNavigatingDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,6 +45,7 @@ class SignUpViewController: UIViewController {
         setupConstarints()
         
         signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
+        loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }
     
     @objc private func signUpButtonTapped() {
@@ -52,11 +55,18 @@ class SignUpViewController: UIViewController {
                                     confirmPassword: confirmPasswordTextField.text) { (result) in
                                         switch result {
                                         case .success(let user):
-                                            self.showAlert(with: "Успешно!", and: "Вы зарегестрированны!")
-                                            print(user.email)
+                                            self.showAlert(with: "Успешно!", and: "Вы зарегестрированны!") {
+                                                self.present(SetupProfileViewController(currentUser: user), animated: true, completion: nil)
+                                            }
                                         case .failure(let error):
                                             self.showAlert(with: "Ошибка!", and: error.localizedDescription)
                                         }
+        }
+    }
+    
+    @objc private func loginButtonTapped() {
+        dismiss(animated: true) {
+            self.delegate?.toLoginVC()
         }
     }
 }
@@ -120,7 +130,7 @@ extension SignUpViewController {
         ])
         
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: 160),
+            stackView.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: 100),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
         ])
@@ -161,11 +171,13 @@ struct SignUpVCProvider: PreviewProvider {
 
 extension UIViewController {
     
-    func showAlert(with title: String, and messege: String) {
+    func showAlert(with title: String, and messege: String, completion: @escaping () -> Void = {}) {
         let alertController = UIAlertController(title: title,
                                                 message: messege,
                                                 preferredStyle: .alert)
-        let oKAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        let oKAction = UIAlertAction(title: "Ok", style: .default) { (_) in
+            completion()
+        }
         alertController.addAction(oKAction)
         present(alertController, animated: true, completion: nil)
     }

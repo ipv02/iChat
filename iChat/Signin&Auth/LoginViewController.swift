@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class LoginViewController: UIViewController {
     
     let welcomeLabel = UILabel(text: "Welcome back!", font: .avenir26())
@@ -34,13 +35,15 @@ class LoginViewController: UIViewController {
                                 isShadow: true,
                                 cornerRadius: 5)
     
-    let signInButton: UIButton = {
+    let signUpButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Sign in", for: .normal)
         button.setTitleColor(.buttonRed(), for: .normal)
         button.titleLabel?.font = .avenir20()
         return button
     }()
+    
+    weak var delegate: AuthNavigatingDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +54,7 @@ class LoginViewController: UIViewController {
         setupConstraints()
         
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
     }
     
     @objc private func loginButtonTapped() {
@@ -58,11 +62,19 @@ class LoginViewController: UIViewController {
         AuthService.shared.login(email: emailTextField.text!,
                                  password: passwordTextField.text!) { (result) in
                                     switch result {
-                                    case .success(let user):
-                                        self.showAlert(with: "Успешно!", and: "Вы авторизованы!")
+                                    case .success(_):
+                                        self.showAlert(with: "Успешно!", and: "Вы авторизованы!") {
+                                            self.present(MainTabBarController(), animated: true, completion: nil)
+                                        }
                                     case .failure(let error):
                                         self.showAlert(with: "Ошибка!", and: error.localizedDescription)
                                     }
+        }
+    }
+    
+    @objc private func signUpButtonTapped() {
+        dismiss(animated: true) {
+            self.delegate?.toSignUpVC()
         }
     }
     
@@ -98,10 +110,10 @@ extension LoginViewController {
                                     axis: .vertical,
                                     spacing: 40)
         
-        signInButton.contentHorizontalAlignment = .leading
+        signUpButton.contentHorizontalAlignment = .leading
         let bottomStackView = UIStackView(arrangedSubviews: [
             needAnAccountLabel,
-            signInButton
+            signUpButton
         ],
                                           axis: .horizontal,
                                           spacing: 10)

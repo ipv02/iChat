@@ -19,6 +19,7 @@
 		84049C0F25042A4A00AAD6EC /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84049C0E25042A4A00AAD6EC /* UIViewController+Extension.swift */; };
 		84049C112505708900AAD6EC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84049C102505708900AAD6EC /* ProfileViewController.swift */; };
 		84108C2424FC056C00CB2376 /* ActiveChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84108C2324FC056C00CB2376 /* ActiveChatCell.swift */; };
+		8445549F251005BA00786445 /* UserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445549E251005BA00786445 /* UserError.swift */; };
 		8445F9B124E988DF0092F4EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445F9B024E988DF0092F4EB /* AppDelegate.swift */; };
 		8445F9B324E988DF0092F4EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445F9B224E988DF0092F4EB /* SceneDelegate.swift */; };
 		8445F9B524E988DF0092F4EB /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445F9B424E988DF0092F4EB /* AuthViewController.swift */; };
@@ -50,6 +51,8 @@
 		845C15B724FBCA5900B4FA84 /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 845C15B524FBCA5800B4FA84 /* waitingChats.json */; };
 		845C15BB24FBCB8600B4FA84 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C15BA24FBCB8600B4FA84 /* Bundle-Decodable.swift */; };
 		84686D6F250E089E00C0DE16 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84686D6E250E089E00C0DE16 /* GoogleService-Info.plist */; };
+		847922B9250FFA2F005AE17C /* AuthNavigatingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847922B8250FFA2F005AE17C /* AuthNavigatingDelegate.swift */; };
+		847922BB250FFDA3005AE17C /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847922BA250FFDA3005AE17C /* FirestoreService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +69,7 @@
 		84049C0E25042A4A00AAD6EC /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		84049C102505708900AAD6EC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		84108C2324FC056C00CB2376 /* ActiveChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveChatCell.swift; sourceTree = "<group>"; };
+		8445549E251005BA00786445 /* UserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserError.swift; sourceTree = "<group>"; };
 		8445F9AD24E988DF0092F4EB /* iChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8445F9B024E988DF0092F4EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8445F9B224E988DF0092F4EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 		845C15B524FBCA5800B4FA84 /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingChats.json; sourceTree = "<group>"; };
 		845C15BA24FBCB8600B4FA84 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		84686D6E250E089E00C0DE16 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		847922B8250FFA2F005AE17C /* AuthNavigatingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigatingDelegate.swift; sourceTree = "<group>"; };
+		847922BA250FFDA3005AE17C /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		A2A42686A8E33513E5109FB0 /* Pods-iChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iChat.debug.xcconfig"; path = "Target Support Files/Pods-iChat/Pods-iChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				84049BFF2501879500AAD6EC /* SelfConfiguringCell.swift */,
+				847922B8250FFA2F005AE17C /* AuthNavigatingDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -194,6 +201,7 @@
 			children = (
 				84049C0B2503B12A00AAD6EC /* Models */,
 				84576B0A250E79A200E54FDF /* AuthService.swift */,
+				847922BA250FFDA3005AE17C /* FirestoreService.swift */,
 			);
 			path = Sevices;
 			sourceTree = "<group>";
@@ -203,6 +211,7 @@
 			children = (
 				84576B0C250E903C00E54FDF /* Validators.swift */,
 				84576B0E250E958500E54FDF /* AuthError.swift */,
+				8445549E251005BA00786445 /* UserError.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -412,6 +421,7 @@
 				845631D32508028F00E3827B /* InsertableTextField.swift in Sources */,
 				8445F9D924EF05DA0092F4EB /* SignUpViewController.swift in Sources */,
 				845C15B324FAE6F600B4FA84 /* PeopleViewController.swift in Sources */,
+				847922BB250FFDA3005AE17C /* FirestoreService.swift in Sources */,
 				8445F9CB24EB290E0092F4EB /* Label+Extension.swift in Sources */,
 				845C15BB24FBCB8600B4FA84 /* Bundle-Decodable.swift in Sources */,
 				845631D7250AB42400E3827B /* ChatRequestViewController.swift in Sources */,
@@ -419,11 +429,13 @@
 				8445F9E124F05F5A0092F4EB /* SetupProfileViewController.swift in Sources */,
 				8445F9CD24EB2A330092F4EB /* UIImageView+Extension.swift in Sources */,
 				845631D5250807AE00E3827B /* UIView+Extension.swift in Sources */,
+				8445549F251005BA00786445 /* UserError.swift in Sources */,
 				8445F9C524EB21DC0092F4EB /* UIButton+Extension.swift in Sources */,
 				8445F9E324F065A70092F4EB /* AddPhotoView.swift in Sources */,
 				8445F9B124E988DF0092F4EB /* AppDelegate.swift in Sources */,
 				8445F9C924EB26300092F4EB /* UIColor+Extension.swift in Sources */,
 				84049C0D250426C000AAD6EC /* UserCell.swift in Sources */,
+				847922B9250FFA2F005AE17C /* AuthNavigatingDelegate.swift in Sources */,
 				84049C112505708900AAD6EC /* ProfileViewController.swift in Sources */,
 				84049C002501879500AAD6EC /* SelfConfiguringCell.swift in Sources */,
 				84049BFE25017B8F00AAD6EC /* WaitingChatCell.swift in Sources */,
