@@ -54,6 +54,8 @@
 		847922B9250FFA2F005AE17C /* AuthNavigatingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847922B8250FFA2F005AE17C /* AuthNavigatingDelegate.swift */; };
 		847922BB250FFDA3005AE17C /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847922BA250FFDA3005AE17C /* FirestoreService.swift */; };
 		847D8709253E2D2F00E09091 /* UIAplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D8708253E2D2F00E09091 /* UIAplication+Extension.swift */; };
+		847D87292540B7B300E09091 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D87282540B7B300E09091 /* StorageService.swift */; };
+		847D872C2540BD7500E09091 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D872B2540BD7500E09091 /* UIImage+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +109,8 @@
 		847922B8250FFA2F005AE17C /* AuthNavigatingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigatingDelegate.swift; sourceTree = "<group>"; };
 		847922BA250FFDA3005AE17C /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		847D8708253E2D2F00E09091 /* UIAplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAplication+Extension.swift"; sourceTree = "<group>"; };
+		847D87282540B7B300E09091 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		847D872B2540BD7500E09091 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		A2A42686A8E33513E5109FB0 /* Pods-iChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iChat.debug.xcconfig"; path = "Target Support Files/Pods-iChat/Pods-iChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -204,6 +208,7 @@
 				84049C0B2503B12A00AAD6EC /* Models */,
 				84576B0A250E79A200E54FDF /* AuthService.swift */,
 				847922BA250FFDA3005AE17C /* FirestoreService.swift */,
+				847D87282540B7B300E09091 /* StorageService.swift */,
 			);
 			path = Sevices;
 			sourceTree = "<group>";
@@ -270,6 +275,7 @@
 				8445F9C424EB21DC0092F4EB /* UIButton+Extension.swift */,
 				8445F9C624EB24D50092F4EB /* UIFont+Extension.swift */,
 				8445F9E424F135EA0092F4EB /* SegmentedControl+Extension.swift */,
+				847D872B2540BD7500E09091 /* UIImage+Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -442,6 +448,7 @@
 				845631D32508028F00E3827B /* InsertableTextField.swift in Sources */,
 				8445F9D924EF05DA0092F4EB /* SignUpViewController.swift in Sources */,
 				845C15B324FAE6F600B4FA84 /* PeopleViewController.swift in Sources */,
+				847D872C2540BD7500E09091 /* UIImage+Extension.swift in Sources */,
 				847922BB250FFDA3005AE17C /* FirestoreService.swift in Sources */,
 				8445F9CB24EB290E0092F4EB /* Label+Extension.swift in Sources */,
 				845C15BB24FBCB8600B4FA84 /* Bundle-Decodable.swift in Sources */,
@@ -455,6 +462,7 @@
 				8445F9E324F065A70092F4EB /* AddPhotoView.swift in Sources */,
 				8445F9B124E988DF0092F4EB /* AppDelegate.swift in Sources */,
 				8445F9C924EB26300092F4EB /* UIColor+Extension.swift in Sources */,
+				847D87292540B7B300E09091 /* StorageService.swift in Sources */,
 				84049C0D250426C000AAD6EC /* UserCell.swift in Sources */,
 				847922B9250FFA2F005AE17C /* AuthNavigatingDelegate.swift in Sources */,
 				84049C112505708900AAD6EC /* ProfileViewController.swift in Sources */,

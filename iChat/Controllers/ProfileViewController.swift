@@ -12,7 +12,7 @@ import UIKit
 class ProfileViewController: UIViewController {
     
     let containerView = UIView()
-    let imageView = UIImageView(image: #imageLiteral(resourceName: "human6"), contentMode: .scaleAspectFill)
+    let imageView = UIImageView(image: #imageLiteral(resourceName: "avatar"), contentMode: .scaleAspectFit)
     let nameLabel = UILabel(text: "Eva Green", font: .systemFont(ofSize: 20, weight: .light))
     let aboutMeLabel = UILabel(text: "You have the opportinity", font: .systemFont(ofSize: 16, weight: .light))
     let myTextField = InsertableTextField()
