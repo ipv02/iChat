@@ -35,7 +35,7 @@ class SignUpViewController: UIViewController {
         return button
     }()
     
-    weak var delegate: AuthNavigatingDelegate?
+    weak var delegate: AuthNavigatingDelegateProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()

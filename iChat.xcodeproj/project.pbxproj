@@ -10,7 +10,7 @@
 		7F4763CC30FD209F24BD0030 /* Pods_iChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C79AD8A2DBBC991A198E0E8 /* Pods_iChat.framework */; };
 		84049BFC25016C5200AAD6EC /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84049BFB25016C5200AAD6EC /* GradientView.swift */; };
 		84049BFE25017B8F00AAD6EC /* WaitingChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84049BFD25017B8F00AAD6EC /* WaitingChatCell.swift */; };
-		84049C002501879500AAD6EC /* SelfConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84049BFF2501879500AAD6EC /* SelfConfiguringCell.swift */; };
+		84049C002501879500AAD6EC /* SelfConfiguringCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84049BFF2501879500AAD6EC /* SelfConfiguringCellProtocol.swift */; };
 		84049C0325039B1A00AAD6EC /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84049C0225039B1A00AAD6EC /* SectionHeader.swift */; };
 		84049C062503AAF700AAD6EC /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 84049C052503AAF700AAD6EC /* users.json */; };
 		84049C082503AD3D00AAD6EC /* MUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84049C072503AD3D00AAD6EC /* MUser.swift */; };
@@ -51,11 +51,14 @@
 		845C15B724FBCA5900B4FA84 /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 845C15B524FBCA5800B4FA84 /* waitingChats.json */; };
 		845C15BB24FBCB8600B4FA84 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C15BA24FBCB8600B4FA84 /* Bundle-Decodable.swift */; };
 		84686D6F250E089E00C0DE16 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84686D6E250E089E00C0DE16 /* GoogleService-Info.plist */; };
-		847922B9250FFA2F005AE17C /* AuthNavigatingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847922B8250FFA2F005AE17C /* AuthNavigatingDelegate.swift */; };
+		847922B9250FFA2F005AE17C /* AuthNavigatingDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847922B8250FFA2F005AE17C /* AuthNavigatingDelegateProtocol.swift */; };
 		847922BB250FFDA3005AE17C /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847922BA250FFDA3005AE17C /* FirestoreService.swift */; };
 		847D8709253E2D2F00E09091 /* UIAplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D8708253E2D2F00E09091 /* UIAplication+Extension.swift */; };
 		847D87292540B7B300E09091 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D87282540B7B300E09091 /* StorageService.swift */; };
 		847D872C2540BD7500E09091 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D872B2540BD7500E09091 /* UIImage+Extension.swift */; };
+		847D872F2546B0F200E09091 /* ListenerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D872E2546B0F200E09091 /* ListenerService.swift */; };
+		847D874C2546D9C800E09091 /* MMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D874B2546D9C700E09091 /* MMessage.swift */; };
+		847D874F2547257300E09091 /* WaitingChatsNavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D874E2547257300E09091 /* WaitingChatsNavigationProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,7 +66,7 @@
 		4CFF90038C284112A4103B00 /* Pods-iChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iChat.release.xcconfig"; path = "Target Support Files/Pods-iChat/Pods-iChat.release.xcconfig"; sourceTree = "<group>"; };
 		84049BFB25016C5200AAD6EC /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		84049BFD25017B8F00AAD6EC /* WaitingChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatCell.swift; sourceTree = "<group>"; };
-		84049BFF2501879500AAD6EC /* SelfConfiguringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfiguringCell.swift; sourceTree = "<group>"; };
+		84049BFF2501879500AAD6EC /* SelfConfiguringCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfiguringCellProtocol.swift; sourceTree = "<group>"; };
 		84049C0225039B1A00AAD6EC /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		84049C052503AAF700AAD6EC /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
 		84049C072503AD3D00AAD6EC /* MUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUser.swift; sourceTree = "<group>"; };
@@ -106,11 +109,14 @@
 		845C15B524FBCA5800B4FA84 /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingChats.json; sourceTree = "<group>"; };
 		845C15BA24FBCB8600B4FA84 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		84686D6E250E089E00C0DE16 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		847922B8250FFA2F005AE17C /* AuthNavigatingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigatingDelegate.swift; sourceTree = "<group>"; };
+		847922B8250FFA2F005AE17C /* AuthNavigatingDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigatingDelegateProtocol.swift; sourceTree = "<group>"; };
 		847922BA250FFDA3005AE17C /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		847D8708253E2D2F00E09091 /* UIAplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAplication+Extension.swift"; sourceTree = "<group>"; };
 		847D87282540B7B300E09091 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		847D872B2540BD7500E09091 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		847D872E2546B0F200E09091 /* ListenerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenerService.swift; sourceTree = "<group>"; };
+		847D874B2546D9C700E09091 /* MMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMessage.swift; sourceTree = "<group>"; };
+		847D874E2547257300E09091 /* WaitingChatsNavigationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatsNavigationProtocol.swift; sourceTree = "<group>"; };
 		A2A42686A8E33513E5109FB0 /* Pods-iChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iChat.debug.xcconfig"; path = "Target Support Files/Pods-iChat/Pods-iChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,8 +135,9 @@
 		84049C01250187DC00AAD6EC /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				84049BFF2501879500AAD6EC /* SelfConfiguringCell.swift */,
-				847922B8250FFA2F005AE17C /* AuthNavigatingDelegate.swift */,
+				84049BFF2501879500AAD6EC /* SelfConfiguringCellProtocol.swift */,
+				847922B8250FFA2F005AE17C /* AuthNavigatingDelegateProtocol.swift */,
+				847D874E2547257300E09091 /* WaitingChatsNavigationProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -148,6 +155,7 @@
 			children = (
 				84049C072503AD3D00AAD6EC /* MUser.swift */,
 				84049C092503B04300AAD6EC /* MChat.swift */,
+				847D874B2546D9C700E09091 /* MMessage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -209,6 +217,7 @@
 				84576B0A250E79A200E54FDF /* AuthService.swift */,
 				847922BA250FFDA3005AE17C /* FirestoreService.swift */,
 				847D87282540B7B300E09091 /* StorageService.swift */,
+				847D872E2546B0F200E09091 /* ListenerService.swift */,
 			);
 			path = Sevices;
 			sourceTree = "<group>";
@@ -454,6 +463,7 @@
 				845C15BB24FBCB8600B4FA84 /* Bundle-Decodable.swift in Sources */,
 				845631D7250AB42400E3827B /* ChatRequestViewController.swift in Sources */,
 				8445F9B524E988DF0092F4EB /* AuthViewController.swift in Sources */,
+				847D872F2546B0F200E09091 /* ListenerService.swift in Sources */,
 				8445F9E124F05F5A0092F4EB /* SetupProfileViewController.swift in Sources */,
 				8445F9CD24EB2A330092F4EB /* UIImageView+Extension.swift in Sources */,
 				845631D5250807AE00E3827B /* UIView+Extension.swift in Sources */,
@@ -464,16 +474,18 @@
 				8445F9C924EB26300092F4EB /* UIColor+Extension.swift in Sources */,
 				847D87292540B7B300E09091 /* StorageService.swift in Sources */,
 				84049C0D250426C000AAD6EC /* UserCell.swift in Sources */,
-				847922B9250FFA2F005AE17C /* AuthNavigatingDelegate.swift in Sources */,
+				847922B9250FFA2F005AE17C /* AuthNavigatingDelegateProtocol.swift in Sources */,
 				84049C112505708900AAD6EC /* ProfileViewController.swift in Sources */,
-				84049C002501879500AAD6EC /* SelfConfiguringCell.swift in Sources */,
+				84049C002501879500AAD6EC /* SelfConfiguringCellProtocol.swift in Sources */,
 				84049BFE25017B8F00AAD6EC /* WaitingChatCell.swift in Sources */,
 				847D8709253E2D2F00E09091 /* UIAplication+Extension.swift in Sources */,
 				8445F9C724EB24D50092F4EB /* UIFont+Extension.swift in Sources */,
 				8445F9B324E988DF0092F4EB /* SceneDelegate.swift in Sources */,
+				847D874C2546D9C800E09091 /* MMessage.swift in Sources */,
 				8445F9D524EDB19E0092F4EB /* ButtonSwiftFormView.swift in Sources */,
 				84576B0B250E79A200E54FDF /* AuthService.swift in Sources */,
 				8445F9DF24F046370092F4EB /* LoginViewController.swift in Sources */,
+				847D874F2547257300E09091 /* WaitingChatsNavigationProtocol.swift in Sources */,
 				8445F9D724EDD0FD0092F4EB /* StackView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

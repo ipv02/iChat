@@ -27,12 +27,42 @@ class ChatRequestViewController: UIViewController {
                                 isShadow: false,
                                 cornerRadius: 10)
     
+    weak var delegate: WaitingChatsNavigationProtocol?
+    
+    private var chat: MChat
+    
+    init(chat: MChat) {
+        self.chat = chat
+        nameLabel.text = chat.friendUsername
+        imageView.sd_setImage(with: URL(string: chat.friendAvatarStringURL), completed: nil)
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .mainWhite()
         customizeElements()
         setupConstraints()
+        
+        denytButton.addTarget(self, action: #selector(denytButtonTapped), for: .touchUpInside)
+        acceptButton.addTarget(self, action: #selector(acceptButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc private func denytButtonTapped() {
+        self.dismiss(animated: true) {
+            self.delegate?.removeWaitingChat(chat: self.chat)
+        }
+    }
+    
+    @objc private func acceptButtonTapped() {
+        self.dismiss(animated: true) {
+            self.delegate?.changeToActive(chat: self.chat)
+        }
     }
     
     private func customizeElements() {
@@ -103,28 +133,5 @@ extension ChatRequestViewController {
             buttonsStackView.heightAnchor.constraint(equalToConstant: 56)
         ])
         
-    }
-}
-
-// MARK: SwiftUI
-import SwiftUI
-
-struct ChatRequesVCProvider: PreviewProvider {
-    static var previews: some View {
-        ContainerView()
-            .edgesIgnoringSafeArea(.all)
-    }
-    
-    struct ContainerView: UIViewControllerRepresentable {
-        
-        let chatRequestVC = ChatRequestViewController()
-        
-        func makeUIViewController(context: UIViewControllerRepresentableContext<ChatRequesVCProvider.ContainerView>) -> ChatRequestViewController {
-            return chatRequestVC
-        }
-        
-        func updateUIViewController(_ uiViewController: ChatRequesVCProvider.ContainerView.UIViewControllerType, context: UIViewControllerRepresentableContext<ChatRequesVCProvider.ContainerView>) {
-            
-        }
     }
 }

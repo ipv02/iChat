@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol SelfConfiguringCell {
+protocol SelfConfiguringCellProtocol {
     static var reuseId: String { get }
     func configure<U: Hashable>(with value: U)
 }
