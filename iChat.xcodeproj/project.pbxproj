@@ -59,6 +59,7 @@
 		847D872F2546B0F200E09091 /* ListenerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D872E2546B0F200E09091 /* ListenerService.swift */; };
 		847D874C2546D9C800E09091 /* MMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D874B2546D9C700E09091 /* MMessage.swift */; };
 		847D874F2547257300E09091 /* WaitingChatsNavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D874E2547257300E09091 /* WaitingChatsNavigationProtocol.swift */; };
+		847D87702548252900E09091 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D876F2548252900E09091 /* ChatsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +118,7 @@
 		847D872E2546B0F200E09091 /* ListenerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenerService.swift; sourceTree = "<group>"; };
 		847D874B2546D9C700E09091 /* MMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMessage.swift; sourceTree = "<group>"; };
 		847D874E2547257300E09091 /* WaitingChatsNavigationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatsNavigationProtocol.swift; sourceTree = "<group>"; };
+		847D876F2548252900E09091 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
 		A2A42686A8E33513E5109FB0 /* Pods-iChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iChat.debug.xcconfig"; path = "Target Support Files/Pods-iChat/Pods-iChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -251,6 +253,7 @@
 				845C15B224FAE6F600B4FA84 /* PeopleViewController.swift */,
 				84049C102505708900AAD6EC /* ProfileViewController.swift */,
 				845631D6250AB42400E3827B /* ChatRequestViewController.swift */,
+				847D876F2548252900E09091 /* ChatsViewController.swift */,
 				84049C042503AA4D00AAD6EC /* Header */,
 				84108C2224FC02A400CB2376 /* Cell */,
 			);
@@ -470,6 +473,7 @@
 				8445549F251005BA00786445 /* UserError.swift in Sources */,
 				8445F9C524EB21DC0092F4EB /* UIButton+Extension.swift in Sources */,
 				8445F9E324F065A70092F4EB /* AddPhotoView.swift in Sources */,
+				847D87702548252900E09091 /* ChatsViewController.swift in Sources */,
 				8445F9B124E988DF0092F4EB /* AppDelegate.swift in Sources */,
 				8445F9C924EB26300092F4EB /* UIColor+Extension.swift in Sources */,
 				847D87292540B7B300E09091 /* StorageService.swift in Sources */,
